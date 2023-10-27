@@ -40,7 +40,7 @@ const (
 	TestListenAddrWithIp4AndTcp = "/ip4/127.0.0.1/tcp/"
 
 	// DirectSendID represents the protocol ID for sending and receiving direct P2P messages
-	DirectSendID = protocol.ID("/erd/directsend/1.0.0")
+	DirectSendID = protocol.ID("/moa/directsend/1.0.0")
 
 	durationBetweenSends            = time.Microsecond * 10
 	durationCheckConnections        = time.Second
