@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/Dharitri-org/sme-core-p2p-go"
+	p2p "github.com/Dharitri-org/sme-core-p2p-go"
 )
 
 var _ ChannelLoadBalancer = (*OutgoingChannelLoadBalancer)(nil)

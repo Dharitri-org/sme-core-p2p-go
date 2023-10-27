@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Oct 27 14:35:16 2023
+# Make data base, printed on Fri Oct 27 14:31:39 2023
 
 # Variables
 
@@ -39,7 +41,7 @@ GDMSESSION = zorin
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /home/magnus/go/src/github.com/Dharitri-org/sme-core-p2p-go
+CURDIR := /home/magnus/Downloads/mx-chain-p2p-go-1.0.14
 # makefile
 SHELL = /bin/sh
 # environment
@@ -59,25 +61,21 @@ USERNAME = magnus
 # environment
 XDG_DATA_DIRS = /usr/share/zorin:/home/magnus/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
-# environment
 DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # environment
 XCURSOR_SIZE = 24
 # environment
-_ = /usr/bin/dbus-update-activation-environment
+_ = /usr/share/code/code
 # environment
 MANAGERPID = 2236
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
 VSCODE_CWD = /home/magnus
-# environment
-GOPROXY = https://proxy.golang.org,direct
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-PATH = /home/magnus/sdk/go1.19.12/bin:/home/magnus/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+PATH = /home/magnus/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
@@ -99,13 +97,13 @@ XDG_SESSION_DESKTOP = zorin
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 13374
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8002
 # automatic
 %F = $(notdir $%)
 # environment
 DISPLAY = :0
 # environment
-PWD = /home/magnus/go/src/github.com/Dharitri-org/sme-core-p2p-go
+PWD = /home/magnus/Downloads/mx-chain-p2p-go-1.0.14
 # default
 .LOADED := 
 # environment
@@ -115,7 +113,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = zorin:GNOME
 # environment
 GTK_MODULES = gail:atk-bridge
 # environment
-GOMODCACHE = /home/magnus/go/pkg/mod
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /home/magnus
 # environment
@@ -175,11 +173,11 @@ MFLAGS = -pqrR
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
+VSCODE_L10N_BUNDLE_LOCATION = 
+# environment
 GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
-# environment
-NO_AT_BRIDGE = 1
 # environment
 QT_ACCESSIBILITY = 1
 # default
@@ -209,7 +207,7 @@ LANG = C
 # environment
 VSCODE_PID = 8002
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=14/124=11%
+# Load=97/1024=9%, Rehash=0, Collisions=13/122=11%
 
 # Pattern-specific Variable Values
 
@@ -217,9 +215,9 @@ VSCODE_PID = 8002
 
 # Directories
 
-# . (device 66306, inode 3106536): 25 files, no impossibilities.
+# . (device 66306, inode 4039495): 24 files, no impossibilities.
 
-# 25 files, no impossibilities in 1 directories.
+# 24 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -237,7 +235,7 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2023-01-10 16:24:22
+#  Last modified 2023-03-08 17:03:55
 #  File has been updated.
 #  Successfully updated.
 
@@ -271,14 +269,12 @@ test-race:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 32 / storage = 278 B / avg = 8 B
-# current buf: size = 8162 B / used = 278 B / count = 32 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 31 / storage = 273 B / avg = 8 B
+# current buf: size = 8162 B / used = 273 B / count = 31 / avg = 8 B
 
-# strcache performance: lookups = 38 / hit rate = 15%
+# strcache performance: lookups = 37 / hit rate = 16%
 # hash-table stats:
-# Load=32/8192=0%, Rehash=0, Collisions=1/38=3%
-# Finished Make data base on Fri Oct 27 14:35:16 2023
+# Load=31/8192=0%, Rehash=0, Collisions=1/37=3%
+# Finished Make data base on Fri Oct 27 14:31:39 2023
 
  
-make: *** No rule to make target 'all'.  Stop.
-
