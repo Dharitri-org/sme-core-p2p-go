@@ -1,6 +1,13 @@
 make --dry-run --always-make --keep-going --print-directory
+
 make: Entering directory '/home/magnus/go/src/github.com/Dharitri-org/sme-core-p2p-go'
 echo "  >  Running unit tests without race detector"
 go test ./...
 make: Leaving directory '/home/magnus/go/src/github.com/Dharitri-org/sme-core-p2p-go'
+
+make: Entering directory '/home/magnus/Downloads/sme-core-p2p-go'
+echo "  >  Running unit tests without race detector"
+go test ./...
+make: Leaving directory '/home/magnus/Downloads/sme-core-p2p-go'\
+
  

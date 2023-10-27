@@ -39,7 +39,11 @@ GDMSESSION = zorin
 # environment
 XMODIFIERS = @im=ibus
 # makefile
+
 CURDIR := /home/magnus/go/src/github.com/Dharitri-org/sme-core-p2p-go
+
+CURDIR := /home/magnus/Downloads/sme-core-p2p-go
+
 # makefile
 SHELL = /bin/sh
 # environment
@@ -101,7 +105,11 @@ GIO_LAUNCHED_DESKTOP_FILE_PID = 141838
 # environment
 DISPLAY = :0
 # environment
+
 PWD = /home/magnus/go/src/github.com/Dharitri-org/sme-core-p2p-go
+
+PWD = /home/magnus/Downloads/sme-core-p2p-go
+
 # default
 .LOADED := 
 # environment
