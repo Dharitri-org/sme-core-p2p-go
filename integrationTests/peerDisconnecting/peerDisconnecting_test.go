@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/libp2p/go-libp2p/core/peer"
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	p2p "github.com/Dharitri-org/sme-core-p2p-go"
 	"github.com/Dharitri-org/sme-core-p2p-go/config"
 	"github.com/Dharitri-org/sme-core-p2p-go/integrationTests"
 	"github.com/Dharitri-org/sme-core-p2p-go/libp2p"
 	"github.com/Dharitri-org/sme-core-p2p-go/mock"
+	"github.com/libp2p/go-libp2p/core/peer"
+	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

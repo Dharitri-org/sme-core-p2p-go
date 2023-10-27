@@ -16,7 +16,7 @@ import (
 	"github.com/Dharitri-org/sme-core-p2p-go/config"
 	"github.com/Dharitri-org/sme-core-p2p-go/data"
 	"github.com/Dharitri-org/sme-core-p2p-go/libp2p"
-	"github.com/Dharitri-org/sme-core-p2p-go/libp2p/crypto"
+	p2pCrypto "github.com/Dharitri-org/sme-core-p2p-go/libp2p/crypto"
 	"github.com/Dharitri-org/sme-core-p2p-go/message"
 	"github.com/Dharitri-org/sme-core-p2p-go/mock"
 	"github.com/Dharitri-org/sme-core/core"
@@ -1869,7 +1869,7 @@ func TestNetworkMessenger_Bootstrap(t *testing.T) {
 				Enabled:                          true,
 				Type:                             "optimized",
 				RefreshIntervalInSec:             10,
-				ProtocolID:                       "moa/kad/1.0.0",
+				ProtocolID:                       "erd/kad/1.0.0",
 				InitialPeerList:                  []string{"/ip4/35.214.140.83/tcp/10000/p2p/16Uiu2HAm6hPymvkZyFgbvWaVBKhEoPjmXhkV32r9JaFvQ7Rk8ynU"},
 				BucketSize:                       10,
 				RoutingTableRefreshIntervalInSec: 5,
@@ -2032,7 +2032,7 @@ func createP2PPrivKeyAndPid() ([]byte, peer.ID) {
 	keyGen := signing.NewKeyGenerator(secp256k1.NewSecp256k1())
 	prvKey, _ := keyGen.GeneratePair()
 
-	p2pPrivKey, _ := crypto.ConvertPrivateKeyToLibp2pPrivateKey(prvKey)
+	p2pPrivKey, _ := p2pCrypto.ConvertPrivateKeyToLibp2pPrivateKey(prvKey)
 	p2pPubKey := p2pPrivKey.GetPublic()
 	pid, _ := peer.IDFromPublicKey(p2pPubKey)
 

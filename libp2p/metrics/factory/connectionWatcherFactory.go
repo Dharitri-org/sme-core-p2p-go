@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Dharitri-org/sme-core-p2p-go"
+	p2p "github.com/Dharitri-org/sme-core-p2p-go"
 	"github.com/Dharitri-org/sme-core-p2p-go/libp2p/metrics"
 )
 

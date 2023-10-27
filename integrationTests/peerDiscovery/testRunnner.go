@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/Dharitri-org/sme-core-p2p-go"
+	p2p "github.com/Dharitri-org/sme-core-p2p-go"
 )
 
 var durationMsgReceived = 2 * time.Second
