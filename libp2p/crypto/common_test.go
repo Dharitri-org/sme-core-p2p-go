@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	p2pCrypto "github.com/Dharitri-org/sme-core-p2p-go/libp2p/crypto"
+	"github.com/Dharitri-org/sme-core-p2p-go/libp2p/crypto"
 	"github.com/Dharitri-org/sme-core-p2p-go/mock"
 	"github.com/Dharitri-org/sme-crypto/signing"
 	"github.com/Dharitri-org/sme-crypto/signing/secp256k1"
@@ -17,9 +17,9 @@ func TestConvertPublicKeyToPeerID(t *testing.T) {
 	t.Run("from a nil public key should error", func(t *testing.T) {
 		t.Parallel()
 
-		pid, err := p2pCrypto.ConvertPublicKeyToPeerID(nil)
+		pid, err := crypto.ConvertPublicKeyToPeerID(nil)
 		assert.Empty(t, pid)
-		assert.Equal(t, p2pCrypto.ErrNilPublicKey, err)
+		assert.Equal(t, crypto.ErrNilPublicKey, err)
 	})
 	t.Run("ToByteArray errors, should error", func(t *testing.T) {
 		t.Parallel()
@@ -31,7 +31,7 @@ func TestConvertPublicKeyToPeerID(t *testing.T) {
 			},
 		}
 
-		pid, err := p2pCrypto.ConvertPublicKeyToPeerID(mockPk)
+		pid, err := crypto.ConvertPublicKeyToPeerID(mockPk)
 		assert.Empty(t, pid)
 		assert.Equal(t, expectedErr, err)
 	})
@@ -44,7 +44,7 @@ func TestConvertPublicKeyToPeerID(t *testing.T) {
 			},
 		}
 
-		pid, err := p2pCrypto.ConvertPublicKeyToPeerID(mockPk)
+		pid, err := crypto.ConvertPublicKeyToPeerID(mockPk)
 		assert.Empty(t, pid)
 		assert.NotNil(t, err)
 		assert.Equal(t, "malformed public key: invalid length: 20", err.Error())
@@ -55,14 +55,14 @@ func TestConvertPublicKeyToPeerID(t *testing.T) {
 		keyGen := signing.NewKeyGenerator(secp256k1.NewSecp256k1())
 		_, pk := keyGen.GeneratePair()
 
-		pid, err := p2pCrypto.ConvertPublicKeyToPeerID(pk)
+		pid, err := crypto.ConvertPublicKeyToPeerID(pk)
 		assert.NotEmpty(t, pid)
 		assert.Nil(t, err)
 	})
 	t.Run("should work using a generated identity", func(t *testing.T) {
 		t.Parallel()
 
-		generator := p2pCrypto.NewIdentityGenerator()
+		generator := crypto.NewIdentityGenerator()
 		skBytes, pid, err := generator.CreateRandomP2PIdentity()
 		assert.Nil(t, err)
 
@@ -71,7 +71,7 @@ func TestConvertPublicKeyToPeerID(t *testing.T) {
 		assert.Nil(t, err)
 
 		pk := sk.GeneratePublic()
-		recoveredPid, err := p2pCrypto.ConvertPublicKeyToPeerID(pk)
+		recoveredPid, err := crypto.ConvertPublicKeyToPeerID(pk)
 		assert.Nil(t, err)
 
 		assert.Equal(t, pid, recoveredPid)
