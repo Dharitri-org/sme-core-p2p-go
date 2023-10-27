@@ -1869,7 +1869,7 @@ func TestNetworkMessenger_Bootstrap(t *testing.T) {
 				Enabled:                          true,
 				Type:                             "optimized",
 				RefreshIntervalInSec:             10,
-				ProtocolID:                       "erd/kad/1.0.0",
+				ProtocolID:                       "moa/kad/1.0.0",
 				InitialPeerList:                  []string{"/ip4/35.214.140.83/tcp/10000/p2p/16Uiu2HAm6hPymvkZyFgbvWaVBKhEoPjmXhkV32r9JaFvQ7Rk8ynU"},
 				BucketSize:                       10,
 				RoutingTableRefreshIntervalInSec: 5,
